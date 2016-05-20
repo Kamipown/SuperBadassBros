@@ -4,13 +4,23 @@
 html { }
 body { margin: 0px; background-color: #fafafa; color: #333; font-size: 0px;}
 body, input { font-family: "Roboto";}
-h1, h2, h3, h4, h5, h6 { margin: 0px; font-family: "Oswald"; font-weight: 400;}
+h1 { margin: 0px; font-family: "Oswald"; font-weight: 700;}
+h2 { margin: 0px; font-family: "Oswald"; font-weight: 400; font-size: 32px;}
 p { margin: 0px;}
 ul { padding: 0px;}
 
 .main_width { display: block; max-width: 800px; margin: auto;}
 
-#main_header { height: 100px; background: #eee;}
+#main_header { box-sizing: border-box; position: fixed; top: 0px; width: 100%; height: 100px; border-bottom: 1px solid #ccc; background: #eee; overflow: hidden;}
 	#main_header a { display: inline-block; height: 100px; color: #333; text-decoration: none;}
-		#main_header a > img { display: inline-block; vertical-align: top; box-sizing: border-box; height: 100px; padding: 10px 10px 10px 0px;}
-		#main_header a > h1 { display: inline-block; vertical-align: top; height: 100px; line-height: 100px; padding-left: 10px; font-size: 42px; font-weight: 700;}
+		#main_header a > img { display: inline-block; vertical-align: top; box-sizing: border-box; width: 100px; height: 100px; padding: 20px 26px; border-left: 1px solid #ccc; border-right: 1px solid #ccc; background: #fff;}
+		#main_header a > h1 { display: inline-block; vertical-align: top; height: 100px; line-height: 100px; padding-left: 20px; font-size: 42px; font-weight: 700;}
+			#main_header a > h1 > span { color: #c44;}
+
+#main_nav { box-sizing: border-box; position: fixed; top: 100px; width: 100%; height: 40px; border-bottom: 1px solid #ccc; background: #e5e5e5;}
+	#main_nav a { display: inline-block; box-sizing: border-box; height: 40px; line-height: 40px; padding: 0px 10px; border-right: 1px solid #ccc; color: #333; font-size: 16px; text-decoration: none;}
+	#main_nav a.active { border-bottom: 3px solid #c44;}
+	#main_nav a:first-child { border-left: 1px solid #ccc;}
+	#main_nav a:hover { color: #c44;}
+
+#main { margin-top: 140px; padding: 10px 0px; font-size: 14px;}
